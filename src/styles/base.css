@@ -1,0 +1,118 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-block-start: 5rem;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--cream);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: var(--step-0);
+  line-height: var(--lh-body);
+  text-align: start;
+  overflow-x: clip;
+}
+
+h1,
+h2,
+h3,
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  line-height: var(--lh-display);
+  text-wrap: balance;
+}
+
+:lang(ar) h1,
+:lang(ar) h2,
+:lang(ar) h3 {
+  font-weight: 700;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+.section-ink :focus-visible,
+.site-footer :focus-visible,
+.announcement :focus-visible,
+.drawer :focus-visible {
+  outline-color: #ffd27a;
+}
+
+main:focus,
+#disclaimer:focus {
+  outline: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  inset-inline-start: var(--s-4);
+  inset-block-start: -4rem;
+  z-index: 100;
+  padding: var(--s-3) var(--s-4);
+  background: var(--ink);
+  color: var(--on-ink);
+  border-radius: var(--r-sm);
+}
+
+.skip-link:focus {
+  inset-block-start: var(--s-2);
+}
+
+/* Direction-bearing icons and decorative art mirror in RTL. */
+[dir='rtl'] .icon-dir,
+[dir='rtl'] .dir-mirror {
+  transform: scaleX(-1);
+}

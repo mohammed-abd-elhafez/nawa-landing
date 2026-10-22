@@ -1,0 +1,81 @@
+:root {
+  /* color */
+  --ink: #14171c;
+  --ink-2: #1f242b;
+  --ink-3: #2c333c;
+  --sand: #f4ecdd;
+  --cream: #fbf7ef;
+  --line: #e2d6bf;
+  --accent: #e4572e;
+  --accent-strong: #b8381a; /* accent for text on light surfaces */
+  --text: #14171c;
+  --text-muted: #4a4f57;
+  --on-ink: #f4ecdd;
+  --on-ink-muted: #c9c2b3;
+  --error: #a4231a;
+  --focus: #1a5fd0;
+
+  /* type */
+  --font-latin: 'Inter', system-ui, sans-serif;
+  --font-latin-display: 'Fraunces', Georgia, serif;
+  --font-arabic: 'IBM Plex Sans Arabic', 'Segoe UI', Tahoma, sans-serif;
+  --font-body: var(--font-latin);
+  --font-display: var(--font-latin-display);
+  --lh-body: 1.6;
+  --lh-display: 1.1;
+
+  --step--1: clamp(0.85rem, 0.83rem + 0.1vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.125rem);
+  --step-1: clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
+  --step-2: clamp(1.4rem, 1.2rem + 1vw, 1.9rem);
+  --step-3: clamp(1.75rem, 1.4rem + 1.75vw, 2.75rem);
+  --step-5: clamp(2.2rem, 1.4rem + 4vw, 4.5rem);
+
+  /* space (4px base) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-12: 3rem;
+  --s-16: 4rem;
+  --s-24: 6rem;
+  --gutter: 1rem;
+
+  /* shape + motion */
+  --r-sm: 6px;
+  --r-md: 14px;
+  --r-lg: 28px;
+  --motion: 180ms;
+  --container: 72rem;
+}
+
+:root:lang(ar) {
+  --font-body: var(--font-arabic);
+  --font-display: var(--font-arabic);
+  --lh-body: 1.85;
+  --lh-display: 1.4;
+}
+
+@media (min-width: 48rem) {
+  :root {
+    --gutter: 2rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --motion: 0ms;
+  }
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
